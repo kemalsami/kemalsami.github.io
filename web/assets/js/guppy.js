@@ -1,25 +1,19 @@
-/*
-*
-* Custom js snippets for Ventcamp v2.0
-* by Vivaco
-*
-*/
 
-var Ventcamp;
+var Guppy;
 
 ;(function($){
 
     $(document).on('ready', function () {
-        Ventcamp.init();
+        Guppy.init(Guppy.defaults);
     });
 
 })( jQuery );
 
 
 // Main theme functions start
-Ventcamp = {
+Guppy = {
     defaults: {
-        log: false,
+        log: true,
         styleSwitcher: false,
         animations: true,
         onePageNav: true,
@@ -37,7 +31,7 @@ Ventcamp = {
     mobileDevice: false,
 
     log: function (msg) {
-        if ( this.options.log ) console.log('%cStartupLy Log: ' + msg, 'color: #1ac6ff');
+        if ( this.options.log ) console.log('%cStartup Log: ' + msg, 'color: #1ac6ff');
     },
 
     buildStyleSwitcher: function () {
