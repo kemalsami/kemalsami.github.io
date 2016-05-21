@@ -275,6 +275,38 @@
 										</div>
 									</div>
 
+									<div id="test_panel" class="panel">
+										<a class="collapsed" data-toggle="collapse" data-parent="#accordion3" href="#acc3-panel-test1" aria-expanded="false"><span class="fa fa-users"></span> Test Topluluk </a>
+										<div id="acc3-panel-test1" class="panel-collapse collapse">
+											<div class="panel-body">
+												<!-- kulüp bilgisi -->
+												<div class="container">
+													<div class="col-sm-2 align-left">
+														<div class="speaker">
+															<div class="photo-wrapper rounded" style="width: 100px; height: 100px;"><img src="assets/img/clubs/club_img_0.jpg" class="img-responsive"></div>
+														</div>
+													</div>
+
+													<div class="col-sm-10 align-left">
+														<article>
+															<h2>Okulumuzun en mizahi kulübü ...</h2>
+															<p><small class="text-alt"> Genel etkinlik bilgileri yazılabilir <span class="highlight">Bilkent Talks </span></small></p>
+															<a href="clubMainPage.html" class="btn btn-outline-clr" style="margin: 30px 0 0">Kulüp Sayfasına Git</a>
+															<div class="speaker align-left">
+																<ul class="speaker-socials">
+																	<li><a href="#"><span class="fa fa-facebook"></span></a></li>
+																	<li><a href="#"><span class="fa fa-twitter"></span></a></li>
+																	<li><a href="#"><span class="fa fa-google-plus"></span></a></li>
+																</ul>
+															</div>
+														</article>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+
 								</div>
 							</div>
 
@@ -511,6 +543,18 @@
 	// -- AGENDA -- FUNCTIONS
 	// -- AGENDA -- FUNCTIONS
 
+
+
+	// -- ADD TEST CLUB --
+	// -- ADD TEST CLUB --
+		for(k=0; k<50; k++){
+			$clone = $('#test_panel').clone(true);
+			tempid = 'test-club-' + k;
+			$($clone.find('div')[0]).attr('id',tempid);
+			$($clone.find('a')[0]).attr('href','#' + tempid);
+			$($clone.find('a')[0]).append(k);
+			$('#accordion3').append($clone);
+		}
 
 	</script>
 
